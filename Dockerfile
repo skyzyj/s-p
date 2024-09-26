@@ -8,8 +8,6 @@ WORKDIR /build
 COPY . /build
 RUN chmod 777 ./mvnw
 
-RUN yum install -y zlib-devel
-
 # Build
 RUN ./mvnw --no-transfer-progress native:compile -Pnative
 
